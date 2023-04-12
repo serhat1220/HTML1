@@ -1,0 +1,126 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <title>Untitled Page</title>
+ <style type="text/css">
+ .style1
+ {
+ width: 148px;
+ }
+ .style2
+ {
+ }
+ </style>
+</head>
+<body>
+ <form id="form1" runat="server">
+ <div>
+ 
+ <table style="width: 105%;">
+ <tr>
+ <td class="style1">
+ <asp:Label ID="Label1" runat="server" Text="Ad:"></asp:Label>
+ </td>
+ <td class="style2">
+ <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+ <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+ ControlToValidate="TextBox1" ErrorMessage="boş birakmayiniz"></asp:RequiredFieldValidator>
+ </td>
+ </tr>
+ <tr>
+ <td class="style1">
+ <asp:Label ID="Label2" runat="server" Text="Soyad:"></asp:Label>
+ </td>
+ <td class="style2">
+ <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+ <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+ ControlToValidate="TextBox2" ErrorMessage="boş birakmayiniz"></asp:RequiredFieldValidator>
+ </td>
+ </tr>
+ <tr>
+ <td class="style1">
+ <asp:Label ID="Label3" runat="server" Text="e-posta:"></asp:Label>
+ </td>
+ <td class="style2">
+ <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+ <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+ ControlToValidate="TextBox3" ErrorMessage="boş birakmayiniz"></asp:RequiredFieldValidator>
+ <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+ ControlToValidate="TextBox3" ErrorMessage="e-postayi doğru girin"
+ ValidationExpression="\w+([-+.']\w+)@\w+([-.]\w+)\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+ </td>
+ </tr>
+ <tr>
+ <td class="style1">
+ <asp:Label ID="Label4" runat="server" Text="Telefon(02222222222):"></asp:Label>
+ </td>
+ <td class="style2">
+ <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+ <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+ ControlToValidate="TextBox4" ErrorMessage="boş birakmayiniz"></asp:RequiredFieldValidator>
+ <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+ ControlToValidate="TextBox4" ErrorMessage="telefonu doğru giriniz"
+ ValidationExpression="0[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"></asp:RegularExpressionValidator>
+ </td>
+ </tr>
+ <tr>
+ <td class="style1">
+ <asp:Label ID="Label5" runat="server" Text="Adres:"></asp:Label>
+ </td>
+ <td class="style2">
+ <asp:TextBox ID="TextBox5" runat="server" Height="57px" TextMode="MultiLine"
+ Width="351px"></asp:TextBox>
+ <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server"
+ ControlToValidate="TextBox5" ErrorMessage="boş birakmayiniz"></asp:RequiredFieldValidator>
+ </td>
+ </tr>
+ <tr>
+ <td class="style1">
+ <asp:Label ID="Label6" runat="server" Text="Kullanici Adi:"></asp:Label>
+ </td>
+ <td class="style2">
+ <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+ <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
+ ControlToValidate="TextBox6" ErrorMessage="boş birakmayiniz"></asp:RequiredFieldValidator>
+ </td>
+ </tr>
+ <tr>
+ <td class="style1">
+ <asp:Label ID="Label7" runat="server" Text="Şifre"></asp:Label>
+ </td>
+ <td class="style2">
+ <asp:TextBox ID="TextBox7" runat="server" TextMode="Password"></asp:TextBox>
+ <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server"
+ ControlToValidate="TextBox7" ErrorMessage="boş birakmayiniz"></asp:RequiredFieldValidator>
+ </td>
+ </tr>
+ <tr>
+ <td class="style1">
+ <asp:Label ID="Label8" runat="server" Text="Şifre Tekrar"></asp:Label>
+ </td>
+ <td class="style2">
+ <asp:TextBox ID="TextBox8" runat="server" TextMode="Password"></asp:TextBox>
+ <asp:CompareValidator ID="CompareValidator1" runat="server"
+ ControlToCompare="TextBox7" ControlToValidate="TextBox8"
+ ErrorMessage="şifreyi tekrar giriniz"></asp:CompareValidator>
+ </td>
+ </tr>
+ <tr>
+ <td class="style1">
+ <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Anasayfa</asp:HyperLink>
+ </td>
+ <td class="style2">
+ <asp:Button ID="Button1" runat="server" Text="Üye Ol" />
+&nbsp;<asp:Label ID="Label9" runat="server"></asp:Label>
+ </td>
+ </tr>
+ </table>
+ 
+ </div>
+ </form>
+</body>
+</html>
+ 
+<strong>
+</strong>
