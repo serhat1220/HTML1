@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+ 
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+ 
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+ 
+div {
+    border-radius: 5px;
+    background-color: yellow;
+    padding: 20px;
+}
+</style>
+<body>
+ 
+<h3>CSS ile Form</h3>
+ 
+<div>
+  <form action="yazilimbilisim.net">
+    <label for="ad">Adınız</label>
+    <input type="text" id="ad" name="ad" placeholder="Adınız..">
+ 
+    <label for="soyad">Soyadınız</label>
+    <input type="text" id="soyad" name="soyad" placeholder="Soyadınız..">
+ 
+    <label for="meslek">Mesleğiniz</label>
+    <select id="meslek" name="meslek">
+      <option value="yazilim">Yazılımcı</option>
+      <option value="tasarim">Web Tasarımcı</option>
+      <option value="grafik">Grafik</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+ 
+</body>
+</html>

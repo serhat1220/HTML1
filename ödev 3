@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Örnek Form Tasarımı</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            font-style: italic;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form</h2>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="name">Adınız:</label>
+                <input type="text" id="name" name="name" required pattern="[a-zA-Z\s]+" title="Sadece harf karakterleri kullanılabilir." />
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="surname">Soyadınız:</label>
+                <input type="text" id="surname" name="surname" required pattern="[a-zA-Z\s]+" title="Sadece harf karakterleri kullanılabilir." />
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="username">Kullanıcı Adı:</label>
+                <input type="text" id="username" name="username" required />
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Adresi:</label>
+                <input type="email" id="email" name="email" required />
+                <span class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]+" title="Sadece rakam karakterleri kullanılabilir." />
+                <span class="error"></span>
+            </div>
+            <input type="submit" value="Gönder">
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const nameInput = document.getElementById('name');
+        const surnameInput = document.getElementById('surname');
+        const usernameInput = document.getElementById('username');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+
+        form.addEventListener('submit', function (event) {
+            const namePattern = /[0-9]/;
+            const emailPattern = /@/;
+            const phonePattern = /\D/;
+            let error = false;
+
+            if (namePattern.test(nameInput.value)) {
+                nameInput.nextElementSibling.textContent = "Adınızda rakam olmamalıdır.";
+                error = true;
+            } else {
+                nameInput.nextElementSibling.textContent = "";
+            }
+
+            if (namePattern.test(surnameInput.value)) {
+                surnameInput.nextElementSibling.textContent = "Soyadınızda rakam olmamalıdır
