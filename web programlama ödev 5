@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1 style="font-size: 30px; background-color: black; color: white;text-align: center;margin: auto;padding: initial;">
+        Trafik Lambası Kontrolü
+    </h1>
+  <title>Trafik Işığı</title>
+  <style>
+.traffic-light {
+  width: 100px;
+  height: 300px;
+  background-color:white;
+  border-radius: 10px;
+  margin: 50px auto;
+  border-style: solid;
+}
+
+.light {
+  width: 80px;
+  height: 80px;
+  background-color:white;
+  border-radius: 50%;
+  margin: 10px auto;
+  border-style: solid;
+}
+
+.buttons {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.button {
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #ccc;
+  color: black;
+  font-size: 16px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.button.active {
+  border-color: blue;
+}
+
+
+  </style>
+  
+</head>
+<body style="background-color:cadetblue;">
+  <div class="traffic-light">
+    <div id="red-light" class="light"></div>
+    <div id="yellow-light" class="light"></div>
+    <div id="green-light" class="light"></div>
+  </div>
+  <div class="buttons">
+    <button style="background-color: red;" id="red-button" class="button" onclick="changeLight('red')">Kırmızı</button>
+    <button style="background-color: yellow;" id="yellow-button" class="button" onclick="changeLight('yellow')">Sarı</button>
+    <button style="background-color: green;" id="green-button" class="button" onclick="changeLight('green')">Yeşil</button>
+  </div>
+
+  <script>
+    function changeLight(color) {
+  var redLight = document.getElementById("red-light");
+  var yellowLight = document.getElementById("yellow-light");
+  var greenLight = document.getElementById("green-light");
+
+  var redButton = document.getElementById("red-button");
+  var yellowButton = document.getElementById("yellow-button");
+  var greenButton = document.getElementById("green-button");
+
+  redLight.style.backgroundColor = "#444";
+  yellowLight.style.backgroundColor = "#444";
+  greenLight.style.backgroundColor = "#444";
+
+  redButton.classList.remove("active");
+  yellowButton.classList.remove("active");
+  greenButton.classList.remove("active");
+
+  if (color === "red") {
+    redLight.style.backgroundColor = "red";
+    redButton.classList.add("active");
+  } else if (color === "yellow") {
+    yellowLight.style.backgroundColor = "yellow";
+    yellowButton.classList.add("active");
+  } else if (color === "green") {
+    greenLight.style.backgroundColor = "green";
+    greenButton.classList.add("active");
+  }
+}
+
+  </script>
+</body>
+</html>
